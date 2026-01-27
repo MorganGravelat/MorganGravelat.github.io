@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,93 +23,88 @@
         }
     </style>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
+    <main>
     <h1>Pizza Ordering Form</h1>
     <h2>Contact Information</h2>
-    <form>
+    <form action="#" method="post">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name" required><br>
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone"><br>
+        <input type="tel" id="phone" name="phone" required><br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-    </form>
+        <input type="email" id="email" name="email" required>
     <h2>Select Pizza Size</h2>
-    <form>
-        <label for"psize">Pizza Size:</label>
-        <select name"psize" id="size">
-            <option value="selectsize">--Select Size--</option>
-            <option value="small">Small</option>
+        <label for="psize">Pizza Size:</label>
+        <select name="psize" id="psize" required>
+            <option value="" disabled selected>--Select Size--</option>
             <option value="medium">Medium</option>
-            <option value="Large">Large</option>
+            <option value="large">Large</option>
+            <option value="xlarge">XLarge</option>
         </select>
-    </form>
     <h2>Select Sauce</h2>
-    <form>
-        <input type="radio" id="marinara" name="sauce_choice" value="MARINARA">
+        <input type="radio" id="marinara" name="sauce_choice" value="MARINARA" required>
         <label for="marinara">Marinara</label><br>
         <input type="radio" id="ranch" name="sauce_choice" value="RANCH">
-        <label for="radio">Ranch</label><br>
+        <label for="ranch">Ranch</label><br>
         <input type="radio" id="sauceless" name="sauce_choice" value="SAUCELESS">
         <label for="sauceless">No Sauce</label>
-    </form>
     <h2>Select Toppings</h2>
-    <form>
-        <input type="checkbox" id="topping1" name="topping1" value="Pepperoni">
+        <input type="checkbox" id="topping1" name="toppings" value="Pepperoni">
         <label for="topping1">Pepperoni</label>
-        <input type="checkbox" id="topping2" name="topping2" value="Sausage">
+        <input type="checkbox" id="topping2" name="toppings" value="Sausage">
         <label for="topping2">Sausage</label><br>
-        <input type="checkbox" id="topping3" name="topping3" value="Mushroom">
+        <input type="checkbox" id="topping3" name="toppings" value="Mushroom">
         <label for="topping3">Mushroom</label>
-        <input type="checkbox" id="topping4" name="topping4" value="Pineapple">
+        <input type="checkbox" id="topping4" name="toppings" value="Pineapple">
         <label for="topping4">Pineapple</label><br>
-        <input type="checkbox" id="topping5" name="topping5" value="Peppers">
+        <input type="checkbox" id="topping5" name="toppings" value="Peppers">
         <label for="topping5">Peppers</label>
-        <input type="checkbox" id="topping6" name="topping6" value="Onions">
+        <input type="checkbox" id="topping6" name="toppings" value="Onions">
         <label for="topping6">Onions</label>
-    </form>
     <h2>Additional Instructions</h2>
-    <form>
         <textarea id="instructions" name="instructions" placeholder="Add instructions"></textarea><br>
-        <input type="submit" value="Submit" />
+        <button type="submit">Submit</button>
     </form>
     <br><br><br>
-    <label>List of My Favorite Games</label>
-      <table>
-    <tr>
-      <th>Developer</th>
-      <th>Title</th>
-      <th>Year</th>
-    </tr>
-
-    <tr>
-      <td rowspan="3">Bioware</td>
-      <td>Star Wars: Knights of the Old Republic</td>
-      <td>2003</td>
-    </tr>
-    <tr>
-      <td>Mass Effect</td>
-      <td>2007</td>
-    </tr>
-    <tr>
-      <td>Mass Effect 2</td>
-      <td>2010</td>
-    </tr>
-
-    <tr>
-      <td rowspan="2">FromSoftware</td>
-      <td>Dark Souls 3</td>
-      <td>2016</td>
-    </tr>
-    <tr>
-      <td>Elden Ring</td>
-      <td>2022</td>
-    </tr>
-
-    <tr>
-      <td colspan="3">Count: 5</td>
-    </tr>
-  </table>
-  </body>
+        <table>
+        <caption> List of My Favorite Games</caption>
+        <thead>
+            <tr>
+            <th scope="col">Developer</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td rowspan="3">Bioware</td>
+            <td>Star Wars: Knights of the Old Republic</td>
+            <td>2003</td>
+            </tr>
+            <tr>
+            <td>Mass Effect</td>
+            <td>2007</td>
+            </tr>
+            <tr>
+            <td>Mass Effect 2</td>
+            <td>2010</td>
+            </tr>
+            <tr>
+            <td rowspan="2">FromSoftware</td>
+            <td>Dark Souls 3</td>
+            <td>2016</td>
+            </tr>
+            <tr>
+            <td>Elden Ring</td>
+            <td>2022</td>
+            </tr>
+            <tr>
+            <td colspan="3">Count: 5</td>
+            </tr>
+        </tbody>
+    </table>
+  </main>
+</body>
 </html>

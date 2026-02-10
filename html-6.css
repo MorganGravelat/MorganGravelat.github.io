@@ -1,0 +1,251 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Arial;
+    align-items: stretch;
+    min-height: 100vh;
+}
+
+#menuItems {
+    background-color: black;
+    min-width: 120px;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+#menuItems button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-style: outset;
+    border-width: 2px;
+    border-color: rgb(84, 83, 83);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#menuItems button:hover {
+    background-color: #86a522;
+    color: black;
+    transition: background-color 0.3s ease;
+    transition: color 1s ease;
+}
+
+#recentArticles {
+    background-color: red;
+    border-color: rgb(180, 50, 50);
+}
+
+#recentArticles:hover {
+    background-color: #ff3333;
+}
+
+#jumpMenu {
+    list-style: none;
+    background-color: #daa520;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+    max-height: 0px;
+    padding: 0px;
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
+    max-height: 500px;
+    padding: 10px;
+}
+
+#jumpMenu li:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #dbdbdb;
+}
+
+
+#jumpMenu li a {
+    color: #585492;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: serif;
+    text-decoration: none;
+}
+
+#jumpMenu li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header > p {
+    background-color: #ff0000;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 12px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 36px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    font: serif;
+    gap: 20px;
+    flex: 1;
+}
+
+#container article {
+    flex: 1 1 45%;
+    min-width: 280px;
+    padding: 10px 20px;
+    color: lightgrey;
+    transition: color 2s ease, flex 2s ease;
+}
+
+#container article:hover {
+    color: black;
+    flex: 2 1 45%;
+}
+
+#container article:hover {
+    color: black;
+    flex: 2 1 45%;
+}
+
+#container article p:first-of-type::first-letter {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 36px;
+}
+
+#container article p a[href="http://www.google.com"]::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("images/arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+
+#container article h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#container article p {
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#thanks {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 18px 30px;
+    margin: 20px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 999;
+}
+
+#thanks a {
+    color: black;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: orange;
+    padding: 18px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer address {
+    font-size: 16px;
+}
+
+footer address div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+footer address a {
+    color: navy;
+}
+
+@media (min-width: 1200px) {
+    #container article {
+        flex: 1 1 20%;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    #container article {
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #container article:hover {
+        flex: 2 1 20%;
+    }
+}

@@ -140,12 +140,14 @@ h1 {
     min-width: 280px;
     padding: 10px 20px;
     color: lightgrey;
-    transition: color 2s ease, flex 2s ease;
+    max-height: 300px;
+    overflow: hidden;
+    transition: color 2s ease, max-height 2s ease;
 }
 
 #container article:hover {
     color: black;
-    flex: 2 1 45%;
+    max-height: 1000px;
 }
 
 #container article:hover {

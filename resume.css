@@ -1,0 +1,269 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 30px;
+}
+
+header h1 {
+    color: #ff0000;
+    font-size: 36px;
+    text-align: center;
+}
+
+header address {
+    text-align: center;
+    font-style: normal;
+}
+
+header address p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+header address a {
+    color: #daa520;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header address a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+header h3 {
+    display: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+header ul li a {
+    display: inline-block;
+    background-color: #0000ff;
+    color: #ffffff;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #545353;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header ul li a:hover {
+    background-color: #86a522;
+    color: #000000;
+}
+
+header ul li:first-child a {
+    background-color: #ff0000;
+    border-color: #b43232;
+}
+
+header ul li:first-child a:hover {
+    background-color: #ff3333;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
+}
+
+main > h2 {
+    background-color: #daa520;
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 16px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-left: 6px solid #ff0000;
+}
+
+main > h3 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 6px;
+    padding-left: 12px;
+    border-left: 4px solid #0000ff;
+}
+
+main > h3 a {
+    color: #585492;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main > h3 a:hover {
+    text-decoration: underline;
+    color: #0000ff;
+}
+
+main > p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 0px 12px;
+    color: #333333;
+}
+
+main > ul {
+    margin-bottom: 16px;
+    padding-left: 36px;
+}
+
+main > ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+}
+
+main > ul li strong {
+    color: #000000;
+}
+
+@media (min-width: 1900px) {
+    header {
+        padding: 20px 60px;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    header address p {
+        font-size: 16px;
+    }
+
+    header ul li a {
+        padding: 12px 28px;
+        font-size: 18px;
+    }
+
+    main {
+        padding: 30px 60px;
+        max-width: 1600px;
+    }
+
+    main > h2 {
+        font-size: 28px;
+        padding: 14px 20px;
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+
+    main > h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    main > p {
+        font-size: 18px;
+        padding: 0px 16px;
+        margin-bottom: 12px;
+    }
+
+    main > ul li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 10px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header h1 {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    header address p {
+        font-size: 12px;
+    }
+
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+    }
+
+    header ul li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main > h2 {
+        font-size: 18px;
+        padding: 8px 10px;
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    main > h3 {
+        font-size: 16px;
+        padding-left: 8px;
+    }
+
+    main > p {
+        font-size: 14px;
+        padding: 0px 8px;
+        margin-bottom: 8px;
+    }
+
+    main > ul {
+        padding-left: 24px;
+        margin-bottom: 10px;
+    }
+
+    main > ul li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}

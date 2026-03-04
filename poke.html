@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Team Builder</title>
+    <link rel="stylesheet" href="poke.css">
+</head>
+<body>
+
+    <div id="pageBackground">
+        <div id="container">
+
+        <h3 class="center">Name or ID</h3>
+
+        <div class="searchRow">
+            <input id="query" type="text" placeholder="Example: 6 or Charizard">
+            <button id="findBtn">Find</button>
+        </div>
+
+        <div id="errorMsg" class="center"></div>
+
+        <div class="center">
+            <div id="placeholder"></div>
+            <img id="sprite" src="" width="160" height="160" style="display:none">
+        </div>
+
+        <div class="center">
+            <audio id="cry" controls style="display:none"></audio>
+        </div>
+
+        <div id="moveSelects">
+            <select id="m1"><option>--</option></select>
+            <select id="m2"><option>--</option></select>
+            <select id="m3"><option>--</option></select>
+            <select id="m4"><option>--</option></select>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <button id="addBtn" disabled>Add to Team</button>
+        </div>
+
+        <div id="teamSection">
+            <h4>Team</h4>
+            <div id="teamList"></div>
+        </div>
+
+        </div>
+    </div>
+
+    <script src="poke.js"></script>
+</body>
+</html>
